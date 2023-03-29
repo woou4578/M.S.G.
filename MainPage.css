@@ -1,0 +1,141 @@
+body{
+    background-color: #FEFCF3;
+}
+.modal-overlay {
+    width: 99%;
+    height: 99%;
+    background: rgba(92, 92, 92, 0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.modal-window {
+    background: #fff;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 400px;
+    height: 250px;
+    border-radius: 5px;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px;
+    text-align: center;
+}
+#manual {
+    display: none;
+}
+#manual_modal {
+    background-color: #FEFCF3;
+    width: 600px;
+    height: 400px;
+}
+li {
+    text-align:left;
+    padding: 5px;
+}
+#gameArea {
+    margin: auto;
+    margin: 50px;
+    padding: 20px;
+    border: 2px solid #FFAF0A;
+    display: none;
+    width: 600px;
+    height: 450px;
+}
+#nextButton1, #nextButton2, #playButton1, #playButton2{
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: red;
+}
+#userName {
+    width: auto;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    background-color: rgba(245, 241, 241, 0.953);
+}
+#next{
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+}
+.screen {
+    display: none;
+}
+#readyScreen1 {
+    display: block;
+}
+#readyScreen2 {
+    display: none;
+}
+#readyScreen1, #readyScreen2, #resultScreen{
+    width: 600px;
+    height: 400px;
+    font: 30px bolder;
+    text-align: center;
+    background-color: black;
+    
+}
+#game1, #game2 {
+    width: 600px;
+    height: 400px;
+    font: 100px bolder;
+    text-align: center;
+    background-color: black;
+}
+#game2 {
+    background-color: white;
+}
+#topSpace {
+    width: 600px;
+    height: 50px;
+}
+.info{
+    color: white;
+    font-size: 20px;
+}
+.result {
+    color: white;
+    font-size: 15px;
+    text-align: left;
+    padding-left: 20px;
+}
+#result_modal {
+    margin: auto;
+    background-color: #FEFCF3;
+    width: 99%;
+    height: 99%;
+    display: none;
+}
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+table {
+    border-collapse: collapse;
+    text-align: center;
+    padding: 30px;
+}
+#totalTable, #record1Table, #record2Table{
+    display: inline-block;
+}
+.notice {
+    text-align: center;
+    font: 20px bolder;
+}
+#resultTitle {
+    text-align: center;
+}
+#resultEndButton {
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: brown;
+}

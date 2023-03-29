@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MainPage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>M.S.G.</title>
+    <!--주소: http://localhost/2022/TP/MainPage.html -->
+</head>
+<body>
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <h1 id="gameTitle">Mini Speed Game</h1>
+            <label for="userName">기록 저장을 위한 ID를 입력해주세요.</label>
+            <br><br>
+            <input type="text" id="userName">
+            <br><br>
+            <button type="button" id="nextButton1"><span id="next1">NEXT</span></button>
+        </div>
+    </div>
+    <div id="manual">
+        <div id="manual_modal" class="modal-window">
+            <!-- 게임 설명하는 부분입니다. -->
+            <img src="images/stopwatch1.png" alt="no image" width="145" height="190" style="float: right; transform:rotate(15deg);">
+            <h1 class="notice">M.S.G. (Mini Speed Game) 설명</h1>
+            <ul id="manualList">
+                <li>play 버튼을 누르면 Game1을 시작합니다.</li>
+                <li>Game1은 동그란 원을 클릭하는 게임입니다.</li>
+                <li>무지개색(빨-주-노-초-파-남-보) 색깔을 가진 원이 갈수록 작아집니다.</li>
+                <li>원의 사이즈별로 총 28개의 원을 클릭하면 Game1이 종료됩니다.</li>
+                <li>play 버튼을 누르면 Game2를 시작합니다.</li>
+                <li>Game2는 화면에 나오는 방향키를 따라 누르는 게임입니다.</li>
+                <li>방향키의 개수 총 50개를 맞추면 Game2가 종료됩니다.</li>
+                <li>틀린 횟수마다 기록에 0.5초가 더해집니다.</li>
+                <li>순위 보기 버튼을 누르면 Top 10 정보를 볼 수 있습니다.</li>
+                <li>화면은 되도록이면 작게하지 않을 것을 권합니다.</li>
+                <br>
+                <h2 class="notice">최대한 <strong>빠르고 정확하게</strong> Game1과 Game2를 클리어하세요.</h2>
+            </ul>
+            <button type="button" id="nextButton2"><span id="next2">NEXT</span></button>
+        </div>
+    </div>
+    <div id="gameArea">
+        <div id="topSpace">
+            <!-- 입력한 ID 기록 -->
+            <span>User Name : <span id="userNameText"></span></span>
+            <br>
+            <!-- 기록(초) 표시하는 부분 -->
+            <span id="stopWatch">Now Record : 
+                <span id="min">0</span>.
+                <span id="sec">00</span>.
+                <span id="millisec">00</span>
+            </span>
+        </div>
+        <div id="bottomSpace">
+            <div id="readyScreen1" class="screen">
+                <!-- 게임을 시작하기 위해 버튼을 누르세요 -->
+                <br><br>
+                <p class="info">Game1 준비 단계입니다</p>
+                <button type="button" id="playButton1">Let's Play</button>
+            </div>
+            <div id="game1" class="screen">
+                <!-- 게임1 플레이 화면 -->
+                <svg id="svgMain" width="600" height="400"></svg>
+            </div>
+            <div id="readyScreen2" class="screen">
+                <br><br>
+                <p class="info">Game2 준비 단계입니다</p>
+                <p class="info">*주의*방향키 이외에 키를 누르면 틀린 횟수로 판단</p>
+                <button type="button" id="playButton2">Let's Play</button>
+            </div>
+            <div id="game2" class="screen">
+                <!-- 게임2 플레이 화면 -->
+                <img src="" alt="no images" id="imageId" width="400" height="400">
+            </div>
+            <div id="resultScreen" class="screen">
+                <!-- 게임 결과 출력 화면 -->
+                <br>
+                <p id="record1Result" class="result"></p>
+                <p id="error1" class="result"></p>
+                <p id="record2Result" class="result"></p>
+                <p id="error2" class="result"></p>
+                <p id="finalResult1" class="result"></p>
+                <p id="finalResult2" class="result"></p>
+                <p id="recordTotalResult" class="result"></p>
+                <button type="button" id="resultEndButton">순위 보기</button>
+            </div>
+        </div>
+    </div>
+    <div id="result_modal" class="modal-window">
+        <h1 id="resultTitle">TOP 10 기록</h1>
+        <table id="totalTable"></table>
+        <table id="record1Table"></table>
+        <table id="record2Table"></table>
+    </div>
+    <script src="MainPage.js"></script>
+</body>
+</html>
